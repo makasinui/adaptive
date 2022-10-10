@@ -1,0 +1,244 @@
+.header
+    margin-top: 35px
+    margin-bottom: 60px
+
+    /* .header-top */
+    &-top
+        display: flex
+        justify-content: space-between
+        margin-bottom: 50px
+
+        @media (max-width: 850px)
+            flex-direction: column
+
+    /* .header-bottom */
+    &-bottom
+        border-bottom: 2px solid #c1c1c1
+        padding-bottom: 12px
+        @media (max-width: 768px)
+            display: none
+
+.header-left
+    display: flex
+    flex-direction: row
+    align-items: center
+    font-size: rem(24)
+    @media (max-width: 850px)
+        justify-content: space-between
+
+    .header-logo
+        @media (min-width: 1367px)
+            margin-right: rem(70)
+
+        @media (max-width: 1000px)
+            margin-right: 16px
+
+        @include adaptiveValue('margin-right', 70, 30, 1366, 1000)
+
+        &__image
+            @media (max-width: 1000px)
+                max-width: 230px
+                width: 100%
+
+            @include adaptiveValue('width', 310, 260, 1366, 1000)
+
+            @include adaptiveValue('width', 260, 205, 1000, 420)
+
+    .person-button
+        display: flex
+        align-items: center
+
+        @include adaptiveValue('width', 190, 150, 1000, 420)
+
+        /* .person-button__text */
+        &__text
+            margin: rem(15) 0
+            //font-size: rem(20)
+            color: #2a344c
+
+            @media (max-width: 768px)
+                font-size: rem(16)
+
+        /* .person-button__input */
+        &__input[type="checkbox"]
+            position: relative
+            width: rem(50)
+            height: 29px
+            -webkit-appearance: none
+            outline: none
+            background: #c6c6c6
+            border-radius: 20px
+            transition: .5s
+            box-shadow: inset 0 0 5px rgba(0,0,0,.2)
+            transform: rotate(90deg)
+
+            /* .person-button__input */
+            &:checked[type="checkbox"]
+                background: #e9a50d
+
+            /* .person-button__input */
+            &:before
+                content: ''
+                position: absolute
+                width: 20px
+                height: 21px
+                border-radius: 20px
+                top: 4px
+                left: 3px
+                background: #fff
+                transition: .5s
+                transform: scale(1.1)
+                box-shadow: 0 2px 5px rgba(0,0,0,.2)
+
+            /* .person-button__input */
+            &:checked[type="checkbox"]:before
+                left: 25px
+                @media (max-width: 1000px)
+                    left: 20px
+                @media (max-width: 420px)
+                    left: 25px
+            
+        @media (max-width: 420px)
+            width: 100%
+        .selection
+            &-bank
+                @media (max-width: 420px)
+                    margin-top: .5rem 
+            &-individuals
+                @media (max-width: 420px)
+                    margin-bottom: 0
+.header-right
+    display: flex
+    align-items: center
+    font-size: rem(24)
+    @media (max-width: 850px)
+        justify-content: space-between
+
+    &__second
+        display: flex
+        align-items: center
+
+    &__vision
+        display: inline-block
+
+    .telephone
+        @media (min-width: 1367px)
+            margin-right: rem(70)
+
+        @media (max-width: 1000px)
+            margin-right: 16px
+
+        @include adaptiveValue('margin-right', 66, 30, 1366, 1000)
+
+        /* .telephone__link */
+        &__link
+            color: #e9a50d
+            font-weight: bold
+            font-size: rem(24)
+
+            @include adaptiveValue('width', 250, 200, 1366, 1000)
+
+            @include adaptiveValue('width', 200, 170, 1000, 420)
+
+            @media (max-width: $mobile)
+                font-size: rem(21)
+    .cite-selector
+        display: inherit
+        position: relative
+
+        @media (min-width: 1367px)
+            margin-right: rem(50)
+
+        @media (max-width: 1000px)
+            margin-right: 16px
+
+        @include adaptiveValue('margin-right', 50, 30, 1366, 1000)
+
+        &__select
+            appearance: none
+            background: none
+
+        &__toggle
+            display: flex
+            justify-content: space-between
+            align-items: center
+            font-size: 1rem
+            font-style: italic
+            line-height: 1.4
+            border-radius: 0.3125rem
+            cursor: pointer
+            user-select: none
+
+            &::after
+                flex-shrink: 0
+                width: 0.75rem
+                height: 0.75rem
+                margin-left: .5rem
+                background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="100" width="100"%3E%3Cpath d="M97.625 25.3l-4.813-4.89c-1.668-1.606-3.616-2.41-5.84-2.41-2.27 0-4.194.804-5.777 2.41L50 52.087 18.806 20.412C17.223 18.805 15.298 18 13.03 18c-2.225 0-4.172.804-5.84 2.41l-4.75 4.89C.813 26.95 0 28.927 0 31.23c0 2.346.814 4.301 2.439 5.865l41.784 42.428C45.764 81.174 47.689 82 50 82c2.268 0 4.215-.826 5.84-2.476l41.784-42.428c1.584-1.608 2.376-3.563 2.376-5.865 0-2.26-.792-4.236-2.375-5.932z"/%3E%3C/svg%3E')
+                background-size: cover
+                content: ""
+
+            &:focus
+                outline: none
+
+        &__dropdown
+            position: absolute
+            z-index: 1
+            top: 2.5rem
+            display: none
+            width: max-content
+            overflow-y: auto
+            border-radius: 0.3125rem
+
+            
+        &__backdrop
+            @media (max-width: $mobile)
+                font-size: rem(19)
+                
+        &__options
+            margin: 0
+            padding: 0
+
+        &__option
+            padding-bottom: rem(10)
+
+            &:hover
+                cursor: pointer
+                color: #e9a50d
+
+            &.selected
+                display: flex
+                justify-content: space-between
+                align-items: center
+                background-color: #e1f5fe
+
+                &::after
+                    width: 0.75rem
+                    height: 0.75rem
+                    color: #0277bd
+                    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="100" width="100" class="svg-inline--fa fa-check fa-w-16" data-icon="check" data-prefix="fas" aria-hidden="true"%3E%3Cpath d="M33.964 85.547l-32.5-32.251a4.935 4.935 0 010-7.017l7.071-7.017a5.027 5.027 0 017.071 0L37.5 60.987l46.894-46.534a5.028 5.028 0 017.07 0l7.072 7.017a4.935 4.935 0 010 7.017l-57.5 57.06a5.027 5.027 0 01-7.072 0z" fill="%230277bd"/%3E%3C/svg%3E')
+                    background-size: cover
+                    content: ""
+
+        &.show
+            .cite-selector__toggle::after
+                transform: rotate(180deg)
+
+            .cite-selector__dropdown
+                display: block
+
+.header-menu
+    .menu-top
+        display: flex
+
+        &__item
+            color: #2a344c
+            font-size: 20px
+
+            @media (min-width: 1367px)
+                margin-right: rem(120)
+
+            @media (max-width: 1000px)
+                margin-right: 16px
+
+            @include adaptiveValue('margin-right', 120, 55, 1366, 1000)

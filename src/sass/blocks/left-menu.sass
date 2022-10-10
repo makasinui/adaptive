@@ -1,0 +1,23 @@
+.main
+    .left-menu
+        min-width: 15%
+        margin-right: 50px
+
+        @media (max-width: 1367px) 
+            width: 30%
+        @media (max-width: $mobile)
+            min-width: 30%
+        @media (max-width: 768px)
+            width: 100%
+        &__item
+            border-radius: 10px
+            filter: drop-shadow(1.634px 2.516px 3.5px rgba(193,193,193,0.73))
+            background-color: rgba(255,255,255,0.7803921568627451)
+            padding: rem(15) 0 rem(15) rem(24)
+            margin-bottom: 10px
+            &:hover
+                box-shadow: 0 0 3px 3px rgb(231 163 13 / 31%)
+                transition-duration: 0.3s
+
+        &__link
+            color: #2a344c

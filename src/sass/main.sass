@@ -1,0 +1,52 @@
+@use "sass:math"
+
+@import "base/mixins"
+
+@import "fonts/fonts"
+
+$fontFamily: "Tahoma"
+$fontSize: rem(16) // размер шрифта по умолчанию
+
+$minWidth: 480
+// Ширина полотна (макета)
+$maxWidth: 1920
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 1920
+// Общий отступ у контейнера
+$containerPadding: 200
+
+// Ширина страбатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding
+
+// Брейк-поинты
+$pc: em($containerWidth) // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: em(1367) // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em(1000) // Телефоны L
+$mobileSmall: em(420) // Телефоны S
+
+@import "base/null"
+
+.container
+    @if($maxWidthContainer > 0)
+        max-width: rem($maxWidthContainer)
+        box-sizing: content-box
+        margin: 0 auto
+
+    @if($containerPadding > 0)
+        @media (min-width: $tablet)
+            padding: 0 rem(math.div($containerPadding, 2))
+
+        @media (max-width: $tablet)
+            padding: 0 rem(math.div(100, 2))
+            justify-content: space-between
+
+        @include adaptiveValue('padding-left', 50, 20, 1000, 420)
+        @include adaptiveValue('padding-right', 50, 20, 1000, 420)
+
+        @media (max-width: $mobileSmall)
+            padding: 0 rem(math.div(40, 2))
+            justify-content: center
+        
+@import "header"
+
+@import "blocks/cards"

@@ -1,0 +1,128 @@
+.banners
+    position: relative
+    text-align: center
+
+    .slick-arrow
+        position: absolute
+        top: 50%
+        width: 40px
+        height: 40px
+        z-index: 10
+        background-color: #fff
+        border-radius: 50%
+        cursor: pointer
+        transition-duration: .4s
+
+        &:hover
+            background-color: #dedede
+
+            & > span:after
+                border-left: 3px solid #454848
+                border-bottom: 3px solid #454848
+
+    .slick-prev
+        left: 5%
+
+        @media (max-width: 768px)
+            display: none
+
+        span:after
+            content: ""
+            position: absolute
+            top: 40%
+            left: 41%
+            width: 23%
+            height: 23%
+            transform: rotate(45deg)
+            border-left: 3px solid #819390
+            border-bottom: 3px solid #819390
+
+    .slick-next
+        right: 5%
+
+        @media (max-width: 768px)
+            display: none
+
+        span:after
+            content: ""
+            position: absolute
+            top: 40%
+            right: 41%
+            width: 23%
+            height: 23%
+            transform: rotate(-135deg)
+            border-left: 3px solid #819390
+            border-bottom: 3px solid #819390
+
+    .banner
+        display: flex !important
+        align-items: center
+        height: 576px
+
+        // .banner__text
+        &__text
+            margin: 0 0 4%
+
+            @media (max-width: 650px)
+                margin: 0 0 6%
+
+        // .banner__title
+        &__title
+            margin: 0 0 7%
+            font-size: rem(58)
+
+            @media (max-width: $tablet)
+                @include adaptiveValue("font-size", 48, 25, 992, 280, 1)
+
+        // .banner__button
+        &__button
+            position: relative
+
+            @media (max-width: 479px)
+                display: none
+
+        // .banner__link
+        &__link
+            padding: 12px 22px
+            border: #fff solid 2px
+            font-size: rem(18)
+
+            &:hover .banner__arrow
+                margin: 15px 0 0 0
+
+            @media (max-width: 650px)
+                padding: 8px 12px
+
+        // .banner__arrow
+        &__arrow
+            position: absolute
+            transform: translate(-40px, 26px)
+            transition: .5s
+
+            @media (max-width: $tablet)
+                font-size: rem(14)
+
+            @media (max-width: 1200px)
+                transform: translate(-46px, 25px)
+
+            @media (max-width: 991px)
+                display: none
+
+            @media (max-width: 650px)
+                transform: translate(-46px, 22px)
+                height: 46px
+
+        // .banners__1
+        &s__1
+            background-image: url("../images/banners/banner.png")
+            background-size: cover
+
+        // .banners__2
+        &s__2
+            background-image: url("../images/banners/banner.png")
+            background-size: cover
+
+        // .banners__3
+        &s__3
+            background-image: url("../images/banners/banner.png")
+            background-size: cover

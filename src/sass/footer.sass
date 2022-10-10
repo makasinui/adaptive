@@ -1,0 +1,88 @@
+.footer
+    background-image: url("../images/layouts/background-footer.png")
+    background-repeat: no-repeat
+    background-size: cover
+
+    .container
+        padding-top: 35px
+        display: flex
+
+    &-info
+        font-size: 13px
+        color: #2a344c
+        font-weight: bold
+        flex: 0 1 30%
+        @media (max-width: 768px)
+            font-size: 16px
+
+    &-logo
+        margin-bottom: 20px
+
+    &-phone
+        margin-bottom: 15px
+
+    &-email
+        margin-bottom: 20px
+
+    &-address
+        &__text
+            margin-bottom: 20px
+
+        &__link
+            font-weight: initial
+
+    &-menu
+        display: flex
+        width: 100%
+        .menu-list__item
+            margin: rem(10) 0
+            display: flex
+            &:before
+                content: '—'
+                position: relative
+                left: -10px
+            .menu-list__link
+                display: inline-block
+                max-width: rem(250)
+        .menu-block
+            flex: 0 1 33.3%
+            &__name
+                font-size: rem(18)
+                text-transform: uppercase
+                color: #e9a50d
+                font-weight: bold
+            @media (max-width: 768px)
+                &__name
+                    padding: rem(20)
+                    margin: rem(5) 0
+                    border-radius: rem(10)
+                    background: #fff
+                    display: flex
+                    font-size: rem(14)
+                    justify-content: space-between
+                    box-shadow: 1px 1px 3px gray
+                    &::after
+                        transition: 0.5s all
+                        flex-shrink: 0
+                        width: 0.75rem
+                        height: 0.75rem
+                        margin-left: .5rem
+                        background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="100" fill="orange" width="100"%3E%3Cpath d="M97.625 25.3l-4.813-4.89c-1.668-1.606-3.616-2.41-5.84-2.41-2.27 0-4.194.804-5.777 2.41L50 52.087 18.806 20.412C17.223 18.805 15.298 18 13.03 18c-2.225 0-4.172.804-5.84 2.41l-4.75 4.89C.813 26.95 0 28.927 0 31.23c0 2.346.814 4.301 2.439 5.865l41.784 42.428C45.764 81.174 47.689 82 50 82c2.268 0 4.215-.826 5.84-2.476l41.784-42.428c1.584-1.608 2.376-3.563 2.376-5.865 0-2.26-.792-4.236-2.375-5.932z"/%3E%3C/svg%3E')
+                        background-size: cover
+                        content: ""
+        @media (max-width: 768px)
+            flex-direction: column
+            .menu-block
+                &-list
+                    display: none
+                &.show
+                    .menu-block-list
+                        display: block
+                        margin-left: rem(24)
+                    .menu-block__name
+                        &::after
+                            transition: 0.5s all
+                            rotate: 180deg
+    @media (max-width: 768px)
+        .container
+            flex-direction: column

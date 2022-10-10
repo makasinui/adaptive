@@ -1,0 +1,90 @@
+@use "sass:math"
+
+@import "base/mixins"
+
+@import "fonts/fonts"
+
+$fontFamily: "Tahoma"
+$fontSize: rem(16) // размер шрифта по умолчанию
+
+$minWidth: 480
+// Ширина полотна (макета)
+$maxWidth: 1920
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 1920
+// Общий отступ у контейнера
+$containerPadding: 150
+
+// Ширина страбатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding
+
+// Брейк-поинты
+$pc: em($containerWidth) // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: em(1367) // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em(1000) // Телефоны L
+$mobileSmall: em(420) // Телефоны S
+
+@import "base/null"
+
+.container
+    @if($maxWidthContainer > 0)
+        max-width: rem($maxWidthContainer)
+        box-sizing: content-box
+        margin: 0 auto
+
+    @if($containerPadding > 0)
+        @media (min-width: $tablet)
+            padding: 0 rem(math.div($containerPadding, 2))
+
+        @media (max-width: $tablet)
+            padding: 0 rem(math.div(100, 2))
+
+        @include adaptiveValue('padding-left', 50, 20, 1000, 420)
+        @include adaptiveValue('padding-right', 50, 20, 1000, 420)
+
+        @media (max-width: $mobileSmall)
+            padding: 0 rem(math.div(40, 2))
+
+.content-container
+    max-width: 1040px
+    //margin: 0 auto
+
+    @media (max-width: $tablet)
+        max-width: 940px
+        //margin: 0 50px 0 auto
+
+.wrapper
+    display: flex
+    
+    @media (max-width: 768px)
+        flex-direction: column
+
+body
+    background-image: url("../images/layouts/background-header.png")
+
+.main
+    background-color: #f1f1f3
+
+.block-header
+    font-size: 24px
+    color: #2a344c
+    font-weight: bold
+.sm-only
+    display: none 
+    @media (min-width: 320px) and (max-width: 768px)
+        display: block
+.sm-none 
+    @media (max-width:768px)
+        display: none
+@import "header"
+
+@import "blocks/breadcrumbs"
+@import "blocks/advantages-icons"
+@import "blocks/advantages-block"
+@import "blocks/make-loan"
+@import "blocks/page-header"
+@import "blocks/detailed"
+@import "blocks/left-menu"
+@import "blocks/banners"
+
+@import "footer"

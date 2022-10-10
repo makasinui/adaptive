@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Банк дружба</title>
+
+		<link rel="stylesheet" href="./css/main.min.css">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header-top">
+					<div class="header-left">
+						<div class="header-left__logo header-logo">
+							<a class="header-logo__link" href="/">
+								<img class="header-logo__image" src="./images/layouts/logo.png" alt="Банк Дружба">
+							</a>
+						</div>
+
+						<div class="header-left__person-button person-button">
+							<input class="person-button__input" type="checkbox">
+
+							<div class="person-button__selections">
+								<p class="person-button__text selection-individuals">Частным лицам</p>
+								<p class="person-button__text selection-bank">Банкам</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="header-right">
+						<div class="header-right__first">
+							<div class="header-right__telephone telephone">
+								<a class="telephone__link" href="tel:+74974192813">+7 (497) 419-28-13</a>
+							</div>
+						</div>
+
+						<div class="header-right__second">
+							<div class="header-right__cite-selector cite-selector">
+								<div class="cite-selector__backdrop">Москва</div>
+
+								<button type="button" class="cite-selector__toggle"></button>
+
+								<div class="cite-selector__dropdown">
+									<ul class="cite-selector__options">
+										<li class="cite-selector__option">Москва</li>
+										<li class="cite-selector__option">Санк-Петербург</li>
+										<li class="cite-selector__option">Ростов-на-Дону</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="header-right__vision">
+								<a href="#vistion">
+									<img src="./images/layouts/eye.png" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="main">
+			<section class="main__cards cards">
+				<div class="container">
+					<div class="card">
+						<div class="card__head card-head">
+							<h3 class="card-head__header">Кредиты</h3>
+						</div>
+
+						<div class="card-body">
+							<ul class="card__items">
+								<li class="card__item">Кредиты наличными</li>
+								<li class="card__item">Рефинансирование кредита</li>
+								<li class="card__item">Образование</li>
+								<li class="card__item">Лечение</li>
+								<li class="card__item">Строительство или приобретение жилья</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="card__head card-head">
+							<h3 class="card-head__header">Вклады</h3>
+						</div>
+
+						<div class="card-body">
+							<ul class="card__items">
+								<li class="card__item">Долгосрочные (более 1 года)</li>
+								<li class="card__item">Долгосрочные (до 1 года)</li>
+								<li class="card__item">Среднесрочные (до 180 дней)</li>
+								<li class="card__item">Краткосрочные (до 90 дней)</li>
+								<li class="card__item">До востребования</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="card__head card-head card__exchange">
+							<h3 class="card-head__header">Обмен валюты</h3>
+							<a class="card-head__button" href="#">Подробнее</a>
+						</div>
+
+						<div class="card-body">
+							<p class="card__text">Курс актуален на 19.02.2022 время 12:50</p>
+
+							<table class="card__table table">
+								<thead class="table-head">
+									<tr>
+										<th>Валюта</th>
+										<th>Покупка</th>
+										<th>Продажа</th>
+									</tr>
+								</thead>
+
+								<tbody class="table-body">
+									<tr>
+										<td class="body__currency">EUR</td>
+										<td>
+											<span class="body__price">82.30</span>
+										</td>
+										<td>
+											<span class="body__price">83.34</span>
+										</td>
+									</tr>
+									<tr>
+										<td class="body__currency">USD</td>
+										<td>
+											<span class="body__price">70.90</span>
+										</td>
+										<td>
+											<span class="body__price">71.80</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="card__head card-head">
+							<h3 class="card-head__header">Денежные переводы</h3>
+						</div>
+
+						<div class="card-body">
+							<ul class="card__items">
+								<li class="card__item">Без открытия счёта</li>
+								<li class="card__item">С открытием счёта</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="card__head card-head">
+							<h3 class="card-head__header">Тарифы и услуги</h3>
+						</div>
+
+						<div class="card-body">
+							<ul class="card__items">
+								<li class="card__item">Операции по счетам</li>
+								<li class="card__item">Операции с наличными денежными средствами</li>
+								<li class="card__item">Операции в иностранной валюте</li>
+								<li class="card__item">Покупка продажа векселей</li>
+								<li class="card__item">Индивидуальные банковские сейфы</li>
+								<li class="card__item">Индивидуальные банковские сейфы</li>
+								<li class="card__item">Индивидуальные банковские сейфы</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<script src="./js/main.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,73 @@
+.main
+    .detailed
+        padding-bottom: 80px
+        @media (max-width: 768px)
+            padding-bottom: rem(40)
+
+        &__header
+            margin-bottom: 35px
+
+        &-tabs
+            display: flex
+            background: white
+            align-items: center
+            margin-bottom: 40px
+            border-radius: 27px
+            &.sm 
+                box-shadow: 1px 1px 3px gray
+                @media (min-width: 769px)
+                    display: none
+            &:not(.sm)
+                @media (max-width: 768px)
+                    display: none
+
+            &-body__text
+                display: none
+                font-size: 17px
+
+                &.show
+                    display: block
+                .text-block
+                    margin-top: rem(10)
+                    &.overflow 
+                        max-height: 650px
+                        overflow: hidden
+            &-body__btn
+                margin-top: rem(10)
+                display: block
+                padding: rem(15) rem(25)
+                background: white
+                border-radius: rem(20)
+                font-size: rem(14)
+                &::after
+                    transition: 0.5s all
+                    content: '›'
+                    rotate: 90deg
+                    position: relative
+                    left: 12px
+                    font-size: 16px
+                    display: inline-block
+                &.show
+                    &::after
+                        transition: 0.5s all
+                        rotate: 270deg
+            &__select 
+                display: flex
+                justify-content: center
+                width: 100%
+                background: white
+                margin: rem(20) rem(20)
+        &-tab
+            cursor: pointer
+            padding: 15px 55px
+            display: flex
+            justify-content: center
+
+            @media (max-width: $tablet)
+                padding: 15px 40px
+            @media (max-width: $mobile)
+                padding: 15px 15px
+            &.active
+                cursor: default
+                background-color: #ffc138
+                border-radius: 27px

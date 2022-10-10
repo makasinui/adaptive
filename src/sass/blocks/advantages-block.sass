@@ -1,0 +1,55 @@
+.main
+    .advantages-blocks-list
+        display: flex
+        flex-wrap: wrap
+
+        margin-bottom: 80px
+
+    .advantages-item
+        padding: rem(40) rem(45)
+        border-radius: 20px
+        background-color: rgba(255, 255, 255, 0.7803921568627451)
+        filter: drop-shadow(1.634px 2.516px 3.5px rgba(193,193,193,0.73))
+
+        display: flex
+        align-items: center
+        justify-content: space-between
+        max-width: 450px
+        flex: 0 1 45%
+        margin-bottom: rem(25)
+        &:nth-child(2n - 1)
+            margin-right: rem(25)
+            @media (max-width: 1366px)
+                margin-right: rem(20)
+
+        @media (max-width: $tablet)
+            padding: rem(35)
+            
+        @media (max-width: $mobile)
+            flex: 1 1 100%
+            max-width: 500px
+            &:nth-child(2n - 1)
+                margin-right: 0
+        @media (max-width: 768px)
+            max-width: none
+        @media (max-width: 420px)
+            flex-direction: column
+
+        &__header
+            font-size: 20px
+            color: #363636
+
+            margin-bottom: 30px
+
+        &__text
+            font-size: 15px
+            color: #606981
+
+        &-left
+            width: 60%
+            @media (max-width: 420px)
+                width: 100%
+                .advantages-item__text
+                    padding-right: rem(75)
+        &__image
+            margin-top: rem(14)
