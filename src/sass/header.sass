@@ -183,12 +183,16 @@
 
         &__dropdown
             position: absolute
+            cursor: pointer
             z-index: 1
             top: 2.5rem
             display: none
             width: max-content
             overflow-y: auto
             border-radius: 0.3125rem
+            @media (max-width: 768px) 
+                font-size: 16px
+            
 
             
         &__backdrop
