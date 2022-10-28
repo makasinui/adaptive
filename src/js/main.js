@@ -16,6 +16,7 @@ window.onload = function(){
     }
 
     if(getCookie('person-selection') === 'selection-individuals'){
+        document.documentElement.style.setProperty('--main-color', '#YOURCOLOR');
         selectionIndividuals.style.opacity = '1';
         selectionBank.style.opacity = '34%';
     }else{
