@@ -6,6 +6,8 @@
 
 $fontFamily: "Tahoma"
 $fontSize: rem(16) // размер шрифта по умолчанию
+$colorYellow: #ffc138
+$textColor: #2a344c
 $minWidth: 480
 // Ширина полотна (макета)
 $maxWidth: 1920
@@ -45,7 +47,14 @@ $mobileSmall: em(420) // Телефоны S
         @media (max-width: $mobileSmall)
             padding: 0 rem(math.div(40, 2))
             justify-content: center
-        
+.text-bold
+    font-weight: bold
+.primary-color
+    color: $textColor
+
 @import "header"
 
 @import "blocks/cards"
+@import "blocks/cards-admin"
+@import "about"
+@import "admin"
