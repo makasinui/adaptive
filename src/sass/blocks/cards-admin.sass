@@ -1,0 +1,126 @@
+.main__admin
+    .cards-admin
+        margin-bottom: rem(50)
+        .cards-between
+            display: flex
+            justify-content: space-between
+            margin-top: rem(40)
+            @media (max-width: 1000px)
+                display: block
+            .card
+                flex: 0 0 48%
+                @media (max-width: 1000px) 
+                    flex: 0 0 100%
+                    margin-top: rem(40)
+
+                &__item
+                    &:before
+                        left: -5%
+                        @media (max-width: 320px)
+                            left: -10%
+        .container
+            display: flex
+            flex-wrap: wrap
+
+        .card
+            min-height: 420px
+
+            background-color: rgba(255, 255, 255, 0.5)
+            backdrop-filter: blur(2px)
+
+            border-radius: 15px
+
+            padding: rem(35) rem(35) rem(25) rem(35)
+            box-shadow: 1px 1px 8px lightgrey
+
+            font-size: rem(16)
+
+            /* card-body */
+            &-body
+                padding-left: rem(2)
+
+            /* card:hover */
+            &:hover
+                box-shadow: 0 0 3px 3px rgb(231 163 13 / 31%)
+                transition-duration: .3s
+
+            /* .card-head */
+            &-head
+                margin-bottom: rem(30)
+
+                /* .card-head__header */
+                &__header
+                    font-size: rem(26)
+                    color: $textColor
+                    font-weight: 400
+                    display: inline-block
+                /* .card-head__button */
+                &__additional
+                    font-size: rem(18)
+            &-footer
+                display: flex
+                &__button
+                    margin-left: auto
+                    padding: rem(15) rem(25)
+                    background-color: $colorYellow
+                    border-radius: 10px
+                    color: $textColor
+                    font-size: rem(15)
+            &__exchange
+                display: flex
+                flex-wrap: wrap
+            /* .card__item */
+            &__items
+                margin-top: rem(18)
+            &__item
+                position: relative
+                margin-left: rem(20)
+                margin-bottom: rem(15)
+                font-size: rem(16)
+                color: #2e2e2e
+
+                /* .card__item::before */
+                &::before
+                    content: ""
+                    width: 6px
+                    height: 6px
+                    border-radius: 100%
+                    background-color: $colorYellow
+                    position: absolute
+                    top: 20%
+                    left: -2%
+                    @media (min-width: 430px) and (max-width: 768px)
+                        left: -3%
+                    @media (max-width: 420px)
+                        left: -5%
+                    @media (max-width: 320px)
+                        left: -10%
+                /* .card__item:hover */
+                &:hover
+                    text-decoration: underline dotted 1px
+
+                    /* .card__item:hover::before */
+                    &::before
+                        background-color: #e09b0b
+            /* .card__text */432
+            &__text
+                font-size: rem(19)
+                padding-bottom: rem(30)
+                @media (max-width: 420px)
+                    font-size: rem(14)
+            &__table
+                font-size: rem(19)
+                width: 90%
+                tr:first-child
+                    td
+                        padding-top: rem(25)
+                td 
+                    padding: rem(15) 0
+                        
+                .body__price 
+                    padding: rem(5) rem(10)
+                    border-radius: rem(10)
+                    background: white
+                .body__currency
+                    font-weight: bold
+                    text-transform: uppercase
