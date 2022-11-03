@@ -41,7 +41,7 @@
 
             /* card:hover */
             &:hover
-                box-shadow: 0 0 3px 3px rgb(231 163 13 / 31%)
+                box-shadow: 0 0 3px 3px var(--main-color)
                 transition-duration: .3s
 
             /* .card-head */
@@ -62,7 +62,7 @@
                 &__button
                     margin-left: auto
                     padding: rem(15) rem(25)
-                    background-color: $colorYellow
+                    background-color: var(--main-color)
                     border-radius: 10px
                     color: $textColor
                     font-size: rem(15)
@@ -85,7 +85,7 @@
                     width: 6px
                     height: 6px
                     border-radius: 100%
-                    background-color: $colorYellow
+                    background-color: var(--main-color)
                     position: absolute
                     top: 20%
                     left: -2%
@@ -101,7 +101,7 @@
 
                     /* .card__item:hover::before */
                     &::before
-                        background-color: #e09b0b
+                        background-color: var(--main-color)
             /* .card__text */432
             &__text
                 font-size: rem(19)
