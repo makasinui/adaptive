@@ -16,10 +16,11 @@ window.onload = function(){
     }
 
     if(getCookie('person-selection') === 'selection-individuals'){
-        document.documentElement.style.setProperty('--main-color', '#YOURCOLOR');
+        document.documentElement.style.setProperty('--main-color', '#2c9e47');
         selectionIndividuals.style.opacity = '1';
         selectionBank.style.opacity = '34%';
-    }else{
+    } else {
+        document.documentElement.style.setProperty('--main-color', '#e9a50d');
         selectionIndividuals.style.opacity = '34%';
         selectionBank.style.opacity = '1';
         personButton.checked = true;
@@ -31,10 +32,12 @@ window.onload = function(){
 
         if(personButton.checked){
             selectionIndividuals.style.opacity = '34%';
+            document.documentElement.style.setProperty('--main-color', '#e9a50d');
             selectionBank.style.opacity = '1';
             document.cookie = 'person-selection=selection-bank;expires=' + cookieDate.toUTCString();
         }else{
             selectionIndividuals.style.opacity = '1';
+            document.documentElement.style.setProperty('--main-color', '#2c9e47');
             selectionBank.style.opacity = '34%';
             document.cookie = 'person-selection=selection-individuals;expires=' + cookieDate.toUTCString();
         }
