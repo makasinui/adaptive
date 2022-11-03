@@ -16,14 +16,19 @@ window.onload = function(){
     }
 
     if(getCookie('person-selection') === 'selection-individuals'){
-        document.documentElement.style.setProperty('--main-color', '#2c9e47');
+        document.documentElement.style.setProperty('--main-color', '#e9a50d');
         selectionIndividuals.style.opacity = '1';
         selectionBank.style.opacity = '34%';
     } else {
-        document.documentElement.style.setProperty('--main-color', '#e9a50d');
+        document.documentElement.style.setProperty('--main-color', '#2c9e47');
         selectionIndividuals.style.opacity = '34%';
         selectionBank.style.opacity = '1';
         personButton.checked = true;
+    }
+    if(document.querySelector('.info-img')) {
+        if (getCookie('person-selection') !== 'selection-individuals') {
+            document.querySelector('.info-img').src = "./images/info-green.png"
+        }
     }
 
     personButton.addEventListener('click', function(){
@@ -32,12 +37,22 @@ window.onload = function(){
 
         if(personButton.checked){
             selectionIndividuals.style.opacity = '34%';
-            document.documentElement.style.setProperty('--main-color', '#e9a50d');
+            document.documentElement.style.setProperty('--main-color', '#2c9e47');
+
+            if(document.querySelector('.info-img')) {    
+                document.querySelector('.info-img').src = "./images/info-green.png"
+            }
+
             selectionBank.style.opacity = '1';
             document.cookie = 'person-selection=selection-bank;expires=' + cookieDate.toUTCString();
-        }else{
+        } else {
             selectionIndividuals.style.opacity = '1';
-            document.documentElement.style.setProperty('--main-color', '#2c9e47');
+            document.documentElement.style.setProperty('--main-color', '#e9a50d');
+
+            if(document.querySelector('.info-img')) {    
+                document.querySelector('.info-img').src = "./images/info-yellow.png"
+            }
+
             selectionBank.style.opacity = '34%';
             document.cookie = 'person-selection=selection-individuals;expires=' + cookieDate.toUTCString();
         }
