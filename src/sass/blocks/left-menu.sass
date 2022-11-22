@@ -2,7 +2,6 @@
     .left-menu
         min-width: 15%
         margin-right: 50px
-
         @media (max-width: 1367px) 
             width: 30%
         @media (max-width: $mobile)
@@ -17,8 +16,12 @@
             padding: 1rem
             margin-bottom: 10px
             &:hover
-                box-shadow: 0 0 3px rgba(var(--main-color), 0.5)
+                box-shadow: 0 0 3px 1px var(--main-color)
                 transition-duration: 0.3s
 
         &__link
             color: #2a344c
+        &__list
+            @media (min-width: 1366px)
+                position: sticky
+                top: 0
