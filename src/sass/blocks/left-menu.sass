@@ -10,13 +10,14 @@
         @media (max-width: 768px)
             width: 100%
         &__item
+            cursor: pointer
             border-radius: 10px
             filter: drop-shadow(1.634px 2.516px 3.5px rgba(193,193,193,0.73))
             background-color: rgba(255,255,255,0.7803921568627451)
             padding: 1rem
             margin-bottom: 10px
             &:hover
-                box-shadow: 0 0 3px 3px rgb(231 163 13 / 31%)
+                box-shadow: 0 0 3px rgba(var(--main-color), 0.5)
                 transition-duration: 0.3s
 
         &__link

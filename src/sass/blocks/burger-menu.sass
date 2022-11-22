@@ -1,0 +1,128 @@
+.burger-check 
+  display: none
+
+
+.burger 
+  position: relative
+  float: right
+  margin-left: 10px
+  width: 60px
+  height: 60px
+  cursor: pointer
+  @media (min-width: 768.8px)
+    display: none
+
+  
+  
+
+  span 
+    position: absolute
+    left: 10px
+    top: 22px
+    width: 40px
+    height: 4px
+    background: #333
+    border-radius: 0.2em
+
+    &:before, &:after 
+      position: absolute
+      left: 10px
+      top: 22px
+      width: 40px
+      height: 4px
+      background: #333
+      border-radius: 0.2em
+    
+
+    &:before, &:after 
+      content: ''
+      left: 0
+    
+
+    &:before 
+      top: -8px
+    
+
+    &:after 
+      top: 8px
+    
+
+.burger-check:checked + .burger 
+  &:after 
+    content: ''
+  
+
+  span 
+    height: 0
+    width: 0
+
+    &:before, &:after 
+      top: 6px
+    
+
+    &:before 
+      -webkit-transform: rotate(225deg)
+      -ms-transform: rotate(225deg)
+      transform: rotate(225deg)
+    
+
+    &:after 
+      -webkit-transform: rotate(-225deg)
+      -ms-transform: rotate(225deg)
+      transform: rotate(-225deg)
+    
+
+span.boo 
+  width: auto
+  margin-top: 0
+  line-height: 60px
+  height: 0
+  overflow: hidden
+
+
+/* Reveals Boo! (IE9 or higher) */
+
+
+
+.a-header 
+  position: relative
+  float: left
+  width: calc(100% - 20px)
+  margin: 0
+  min-height: 50px
+  overflow: hidden
+
+  ul 
+    position: relative
+    float: left
+    width: 100%
+    list-style: none
+    margin: 0
+    padding: 0
+
+    a 
+      position: relative
+      float: left
+      width: 100%
+      height: 0
+      line-height: 50px
+      padding: 0 15px
+      text-decoration: none
+      overflow: hidden
+      color: #333
+      text-align: left
+
+      &:hover, &:active, &:focus, &:visited 
+        text-decoration: none
+        background: #fff
+        border-bottom-color: #08c
+      
+    
+  
+
+
+/* Animate height of 'a' element in order to reveal the menu on check (IE9 or higher) */
+
+#main-nav:checked ~ ul a 
+  height: 25px
+  font-size: rem(16)

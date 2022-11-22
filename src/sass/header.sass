@@ -1,3 +1,4 @@
+@import "blocks/burger-menu"
 .header
     margin-top: 35px
     margin-bottom: 60px
@@ -113,8 +114,8 @@
     font-size: rem(24)
     @media (max-width: 850px)
         justify-content: space-between
-
     &__second
+        position: relative
         display: flex
         align-items: center
 
@@ -142,6 +143,8 @@
 
             @media (max-width: $mobile)
                 font-size: rem(21)
+            @media (max-width: 355px)
+                font-size: rem(16)
     .cite-selector
         display: inherit
         position: relative
