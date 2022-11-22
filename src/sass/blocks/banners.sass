@@ -9,6 +9,11 @@
         align-items: flex-end
         &__item 
             margin: rem(10) 0
+            &:not(.banners__item:first-child)
+                margin-bottom: 0
+                @media (max-width: 768px)
+                    margin-top: 0
+                    margin-bottom: 0.625rem
             @media (max-width: 768px)
                 img 
                     max-width: 150px

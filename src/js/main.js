@@ -5,7 +5,15 @@ function getCookie(name){
 
 window.onload = function(){
     let personButton = document.querySelector('.person-button__input');
-    
+    window.onscroll = function(e) {
+        if(window.scrollY > 0) {
+            document.querySelector('.header').style.background = 'white';
+            document.querySelector('.header').style.opacity = '0.9';
+        } else {
+            document.querySelector('.header').style.background = 'unset';
+            document.querySelector('.header').style.opacity = '1';
+        }
+    }    
     let selectionIndividuals = document.querySelector('.selection-individuals');
     let selectionBank = document.querySelector('.selection-bank');
 
