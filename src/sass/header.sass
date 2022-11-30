@@ -10,8 +10,7 @@
         display: flex
         justify-content: space-between
         margin-bottom: 16px
-
-        @media (max-width: 850px)
+        @media (max-width: 768px)
             flex-direction: column
 
     /* .header-bottom */
@@ -61,7 +60,9 @@
 
             @media (max-width: 768px)
                 font-size: rem(16)
-
+        &__selections
+            @media (max-width: 1000px)
+                font-size: rem(16)
         /* .person-button__input */
         &__input[type="checkbox"]
             position: relative
@@ -110,6 +111,30 @@
             &-individuals
                 @media (max-width: 420px)
                     margin-bottom: 0
+.telephone
+        @media (min-width: 1367px)
+            margin-right: rem(70)
+
+        @media (max-width: 1000px)
+            margin-right: 16px
+
+        @include adaptiveValue('margin-right', 66, 30, 1366, 1000)
+
+        /* .telephone__link */
+        &__link
+            color: var(--main-color)
+            font-weight: bold
+            font-size: rem(24)
+
+            @include adaptiveValue('width', 250, 200, 1366, 1000)
+
+            @include adaptiveValue('width', 200, 170, 1000, 420)
+
+            @media (max-width: $mobile)
+                font-size: rem(21)
+            @media (max-width: 768px)
+                font-size: rem(16)
+            
 .header-right
     display: flex
     align-items: center
@@ -159,6 +184,8 @@
 
         @media (max-width: 1000px)
             margin-right: 16px
+        @media (max-width: 768px)
+            margin-right: 0
 
         @include adaptiveValue('margin-right', 50, 30, 1366, 1000)
 
@@ -240,7 +267,10 @@
 
             .cite-selector__dropdown
                 display: block
-
+.header-mobile
+    display: flex !important
+    justify-content: space-between
+    margin-top: 7px
 .header-menu
     .menu-top
         display: flex
@@ -250,9 +280,87 @@
             font-size: 20px
 
             @media (min-width: 1367px)
-                margin-right: rem(120)
+                margin-right: rem(100)
 
             @media (max-width: 1000px)
                 margin-right: 16px
 
-            @include adaptiveValue('margin-right', 120, 55, 1366, 1000)
+            @include adaptiveValue('margin-right', 100, 55, 1366, 1000)
+
+.person-button
+    display: flex
+    align-items: center
+
+    @include adaptiveValue('width', 190, 150, 1000, 420)
+
+    /* .person-button__text */
+    &__text
+        margin: rem(15) 0
+        //font-size: rem(20)
+        color: #2a344c
+
+        @media (max-width: 768px)
+            font-size: rem(16)
+    &.sm-only
+        width: 100%
+    &__selections
+        @media (max-width: 1000px)
+            font-size: rem(16)
+        @media (max-width: 768px)
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 100%
+        .selection-individuals, .selection-bank
+            margin-top: rem(14) !important
+            margin: 0
+            &.active
+                border-bottom: 1px solid var(--main-color)
+    /* .person-button__input */
+    &__input[type="checkbox"]
+        position: relative
+        width: rem(50)
+        height: 28px
+        -webkit-appearance: none
+        outline: none
+        background: #c6c6c6
+        border-radius: 20px
+        transition: .5s
+        box-shadow: inset 0 0 5px rgba(0,0,0,.2)
+        transform: rotate(90deg)
+        background: #e9a50d
+        /* .person-button__input */
+        &:checked[type="checkbox"]
+            background: #54993b
+
+        /* .person-button__input */
+        &:before
+            content: ''
+            position: absolute
+            width: 20px
+            height: 21px
+            border-radius: 20px
+            top: 4px
+            left: 3px
+            background: #fff
+            transition: .5s
+            transform: scale(1.1)
+            box-shadow: 0 2px 5px rgba(0,0,0,.2)
+
+        /* .person-button__input */
+        &:checked[type="checkbox"]:before
+            left: 25px
+            @media (max-width: 1000px)
+                left: 20px
+            @media (max-width: 420px)
+                left: 25px
+        
+    @media (max-width: 420px)
+        width: 100%
+    .selection
+        &-bank
+            @media (max-width: 420px)
+                margin-top: .5rem 
+        &-individuals
+            @media (max-width: 420px)
+                margin-bottom: 0

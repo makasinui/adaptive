@@ -11,6 +11,8 @@
   cursor: pointer
   @media (min-width: 768.8px)
     display: none
+  @media (max-width: 768px)
+    width: 50px
 
   
   
@@ -89,13 +91,14 @@ span.boo
 
 .a-header 
   position: relative
-  float: left
+  float: right
   max-width: 70px
   margin: 0
 
   ul 
     position: absolute
     z-index: 2
+    border-radius: 10px
     top: 50px
     float: left
     min-width: 100%
@@ -117,10 +120,7 @@ span.boo
       color: #333
       text-align: left
 
-      &:hover, &:active, &:focus, &:visited 
-        text-decoration: none
-        background: #fff
-        border-bottom-color: #08c
+      
       
     
   

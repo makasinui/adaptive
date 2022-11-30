@@ -54,13 +54,7 @@ $mobileSmall: em(420) // Телефоны S
     color: $textColor
 .secondary-color
     color: green
-.sm-only
-    display: none 
-    @media (min-width: 320px) and (max-width: 768px)
-        display: block
-.sm-none 
-    @media (max-width:768px)
-        display: none
+
 .main-footer 
     margin-bottom: rem(30)
     margin-top: rem(20)
@@ -75,6 +69,13 @@ $mobileSmall: em(420) // Телефоны S
         padding-top: rem(3)
 
 @import "header"
+.sm-only 
+    display: none !important
+    @media (min-width: 320px) and (max-width: 768px)
+        display: inherit !important
+.sm-none 
+    @media (max-width:768px)
+        display: none !important
 
 @import "blocks/cards"
 @import "blocks/cards-admin"
