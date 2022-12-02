@@ -97,8 +97,8 @@ window.onload = function () {
     selectionIndividuals.style.opacity = "34%";
     selectionBank.style.opacity = "1";
     
-    selectionIndividualsSm.classList.remove('active');
-    selectionBankSm.classList.add('active');
+    selectionIndividualsSm && selectionIndividualsSm.classList.remove('active');
+    selectionBankSm && selectionBankSm.classList.add('active');
     personButton.checked = true;
   }
   if (document.querySelector(".info-img")) {
