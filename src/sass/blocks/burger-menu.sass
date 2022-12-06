@@ -25,7 +25,7 @@
     top: 22px
     width: 40px
     height: 4px
-    background: #333
+    background: var(--main-color)
     border-radius: 0.2em
     @media (max-width: 420px)
       width: 30px
@@ -35,8 +35,8 @@
       top: 22px
       width: 40px
       height: 4px
-      background: #333
-      border-radius: 0.2em
+      background: var(--main-color)
+      border-radius: 10px
       @media (max-width: 420px)
         width: 30px
     
@@ -96,21 +96,34 @@ span.boo
   max-width: 70px
   margin: 0
 
-  ul 
+  .item-main 
+    width: 100%
+    display: flex
+  label
+    z-index: 3
+  .menu-top__wrapper 
     position: absolute
+    opacity: 1
     z-index: 2
     border-radius: 10px
-    top: 60px
+    top: 0px
     float: left
     min-width: 100%
-    background: white
+    background: #f8faff
     left: 0
     list-style: none
     margin: 0
     padding: 0
+    height: 0
     width: 100%
     @media (max-width: 420px)
       right: -20px
+  .menu-top__item
+    height: 0
+  ul 
+    overflow-y: auto
+    height: 0
+    max-height: 100vh
     a 
       position: relative
       float: left
@@ -118,10 +131,38 @@ span.boo
       height: 0
       line-height: 50px
       padding: 0 15px
+      padding-right: 0
       text-decoration: none
       overflow: hidden
       color: #333
       text-align: left
+    li
+      height: 0
+      &:first-child
+        a.main-menu__text
+          text-align: center !important
+          margin: 0 !important
+    .menu-top__arrow
+      height: 0
+      transform: rotate(180deg)
+    .menu-top__arrow-detail
+      display: none
+    .menu-top__detail-wrapper
+      padding: 0 10px
+      padding-top: 0px !important
+      margin: 0 auto
+
+      .menu-top__detail-item
+        font-size: 1rem
+        display: flex
+        align-items: center
+        padding: 5px 0px
+        border: 1px solid #eeeff1
+        border-radius: 15px
+        box-shadow: 0 7px 14px rgb(11 31 53 / 10%)
+        background: #fff
+    .menu-top__arrow-detail.checked
+      display: block   
 
       
       
@@ -131,10 +172,65 @@ span.boo
 
 /* Animate height of 'a' element in order to reveal the menu on check (IE9 or higher) */
 
-#main-nav:checked ~ ul a 
+#main-nav:checked ~ .menu-top__wrapper
+  -webkit-animation: linear
+  -webkit-animation-name: run
+  -webkit-animation-duration: .5s
+  height: auto !important
+
+@keyframes run
+  0%
+    left: -310px
+  10%
+    left: -280px
+  20%
+    left: -250px
+  30%
+    left: -220px
+  40%
+    left: -190px
+  50%
+    left: -160px
+  100%
+    left: 0
+
+
+#main-nav:checked ~ .menu-top__wrapper ul a
   min-height: 35px
   height: 100%
   line-height: 30px
   font-size: rem(16)
   text-align: start
-  margin-left: 3.25rem
+  
+
+#main-nav:checked ~ .menu-top__wrapper ul 
+  height: auto
+  padding-top: 17px
+  li
+    height: auto
+    min-height: 35px
+    margin: 16px 12px
+
+    .menu-top__item-wrapper
+      display: flex
+      align-items: center
+      padding: 8px 0px
+      border: 1px solid #eeeff1
+      border-radius: 15px
+      box-shadow: 0 7px 14px rgb(11 31 53 / 10%)
+      background: #fff
+
+#main-nav:checked ~ .menu-top__wrapper ul li.menu-top__item:first-child
+  padding: 0
+  box-shadow: none
+  border: none
+  a
+    width: 100%
+  
+
+#main-nav:checked ~ .menu-top__wrapper ul svg
+  height: 100%
+#main-nav:checked ~ .menu-top__wrapper .menu-top__arrow-wrapper
+  padding-right: 15px
+  .menu-top__arrow.checked 
+    transform: rotate(270deg)

@@ -10,6 +10,46 @@ function getCookie(name) {
 }
 
 window.onload = function () {
+  const detailMenu = document.querySelectorAll('.menu-top__arrow-wrapper');
+  if(detailMenu) {
+    detailMenu.forEach(menu => {
+      menu.addEventListener('click', (e) => {
+        const arrow = menu.querySelector('.menu-top__arrow');
+        const arrows = document.querySelectorAll('.menu-top__arrow');
+        const readMore = menu.closest('.menu-top__item').querySelector('.menu-top__arrow-detail');
+        const allReadMore = document.querySelectorAll('.menu-top__arrow-detail');
+
+        const deleteCheckedClass = (elements, element) => elements.forEach(el => el !== element && el.classList.remove('checked'));
+
+        deleteCheckedClass(arrows, arrow);
+        deleteCheckedClass(allReadMore, readMore);
+
+        const allItems = document.querySelectorAll('.menu-top__item');
+        allItems.forEach(it => {it.style.marginBottom = '16px'; it.style.marginTop = '16px'})
+        const allItemsArray = [];
+
+        for(let i = 0; i < allItems.length; i++ ) 
+          allItemsArray.push(allItems[i]);
+
+        const idx = allItemsArray.findIndex(a => a===menu.closest('.menu-top__item'));
+          
+        if(!arrow.classList.contains('checked')) {
+          arrow.classList.add('checked');
+          readMore.classList.add('checked');
+          /* Меняем отступы чтобы выглядело одинаково */
+          allItems[idx].style.marginBottom = '0';
+          allItems[idx + 1].style.marginTop = '5px';
+        } else {
+          arrow.classList.remove('checked');
+          readMore.classList.remove('checked');
+          
+          allItems[idx].style.marginBottom = '16px';
+          allItems[idx + 1].style.marginTop = '16px';
+        
+        }
+      })
+    })
+  }
   window.onscroll = function (e) {
     if (window.scrollY > 0) {
       document.querySelector(".header").style.background = "white";
