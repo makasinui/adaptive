@@ -78,13 +78,16 @@ $mobileSmall: em(420) // Телефоны S
     font-size: 24px
     color: #2a344c
     font-weight: bold
-.sm-only
-    display: none 
+.sm-only 
+    display: none !important
     @media (min-width: 320px) and (max-width: 768px)
-        display: block
+        display: inherit !important
+.sm-column
+    @media (min-width: 320px) and (max-width: 768px)
+        flex-direction: column
 .sm-none 
     @media (max-width:768px)
-        display: none
+        display: none !important
 @import "header"
 
 @import "blocks/breadcrumbs"

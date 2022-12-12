@@ -271,9 +271,12 @@
             .cite-selector__dropdown
                 display: block
 .header-mobile
-    display: flex !important
     justify-content: space-between
     margin-top: 7px
+    display: none
+    @media (max-width: 768px)
+        display: flex !important
+
 .header-menu
     .menu-top
         display: flex
