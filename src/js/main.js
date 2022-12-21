@@ -54,17 +54,19 @@ window.onload = function () {
   const bankInfoButton = document.querySelector('.bank-info__button');
   const footer = document.querySelector('.footer');
 
-  bankInfoButton.addEventListener('click', function(){
-    if(footer.classList.contains('show')){
-      footer.classList.remove('show');
-      footer.classList.add('hidden');
-    }else{
-      footer.classList.remove('hidden');
-      footer.classList.add('show');
+  if(bankInfoButton !== null){
+    bankInfoButton.addEventListener('click', function(){
+      if(footer.classList.contains('show')){
+        footer.classList.remove('show');
+        footer.classList.add('hidden');
+      }else{
+        footer.classList.remove('hidden');
+        footer.classList.add('show');
 
-      window.scrollTo(0, 450);
-    }
-  });
+        window.scrollTo(0, 450);
+      }
+    });
+  }
 
   window.onscroll = function (e) {
     if (window.scrollY > 0) {
