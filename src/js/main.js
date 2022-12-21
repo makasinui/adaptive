@@ -50,6 +50,22 @@ window.onload = function () {
       })
     })
   }
+
+  const bankInfoButton = document.querySelector('.bank-info__button');
+  const footer = document.querySelector('.footer');
+
+  bankInfoButton.addEventListener('click', function(){
+    if(footer.classList.contains('show')){
+      footer.classList.remove('show');
+      footer.classList.add('hidden');
+    }else{
+      footer.classList.remove('hidden');
+      footer.classList.add('show');
+
+      window.scrollTo(0, 450);
+    }
+  });
+
   window.onscroll = function (e) {
     if (window.scrollY > 0) {
       document.querySelector(".header").style.background = "white";
@@ -270,40 +286,44 @@ window.onload = function () {
 
   const select = document.querySelector(".detailed-tabs__select");
 
-  select.addEventListener("change", (e) => {
-    const tab = document.querySelector(
-      `option[data-value="${e.target.value}"]`
-    );
-    let nextTabValue = e.target.value;
-
-    let activeTab = document.querySelector(".detailed-tab-sm.active");
-    let activeTabValue = activeTab.getAttribute("data-value");
-
-    let activeText = document.querySelector(
-      '.detailed .detailed-tabs-body .detailed-tabs-body__text[data-value="' +
-        activeTabValue +
-        '"]'
-    );
-    let nextText = document.querySelector(
-      '.detailed .detailed-tabs-body .detailed-tabs-body__text[data-value="' +
-        nextTabValue +
-        '"]'
-    );
-
-    if (!tab.classList.contains("active")) {
-      tab.classList.add("active");
-      activeTab.classList.remove("active");
-
-      nextText.classList.add("show");
-      activeText.classList.remove("show");
-    }
-
-    toggleContent(nextText, nextTabValue);
-  });
+  if(select !== null){
+    select.addEventListener("change", (e) => {
+      const tab = document.querySelector(
+        `option[data-value="${e.target.value}"]`
+      );
+      let nextTabValue = e.target.value;
+  
+      let activeTab = document.querySelector(".detailed-tab-sm.active");
+      let activeTabValue = activeTab.getAttribute("data-value");
+  
+      let activeText = document.querySelector(
+        '.detailed .detailed-tabs-body .detailed-tabs-body__text[data-value="' +
+          activeTabValue +
+          '"]'
+      );
+      let nextText = document.querySelector(
+        '.detailed .detailed-tabs-body .detailed-tabs-body__text[data-value="' +
+          nextTabValue +
+          '"]'
+      );
+  
+      if (!tab.classList.contains("active")) {
+        tab.classList.add("active");
+        activeTab.classList.remove("active");
+  
+        nextText.classList.add("show");
+        activeText.classList.remove("show");
+      }
+  
+      toggleContent(nextText, nextTabValue);
+    });
+  }
 
   const activeTab = document.querySelector(".detailed-tabs-body__text.show");
-  const activeTabAttribute = activeTab.getAttribute("data-value");
-  toggleContent(activeTab, activeTabAttribute);
+  if(activeTab !== null){
+    const activeTabAttribute = activeTab.getAttribute("data-value");
+    toggleContent(activeTab, activeTabAttribute);
+  }
 
   const menuItems = document.querySelectorAll(".menu-block");
 
@@ -340,22 +360,25 @@ window.onload = function () {
   });
   //change available of buttons for scroll
   const scrollBody = document.querySelector(".make-loan__table-wrapper");
-  scrollBody.addEventListener("scroll", () => {
-    const container = document.querySelector(".make-loan__table-wrapper");
-    const con = document.querySelector(".make-loan__scroll");
-    const step = 100;
-    const sl = container.scrollLeft;
 
-    if (sl >= 200) {
-      arrows[1].classList.add("gray");
-    } else {
-      arrows[1].classList.remove("gray");
-    }
-
-    if (sl - step <= -100) {
-      arrows[0].classList.add("gray");
-    } else {
-      arrows[0].classList.remove("gray");
-    }
-  });
+  if(scrollBody !== null){
+    scrollBody.addEventListener("scroll", () => {
+      const container = document.querySelector(".make-loan__table-wrapper");
+      const con = document.querySelector(".make-loan__scroll");
+      const step = 100;
+      const sl = container.scrollLeft;
+  
+      if (sl >= 200) {
+        arrows[1].classList.add("gray");
+      } else {
+        arrows[1].classList.remove("gray");
+      }
+  
+      if (sl - step <= -100) {
+        arrows[0].classList.add("gray");
+      } else {
+        arrows[0].classList.remove("gray");
+      }
+    });
+  }
 };

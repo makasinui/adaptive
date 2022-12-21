@@ -55,14 +55,14 @@ $mobileSmall: em(420) // Телефоны S
 .secondary-color
     color: green
 
-.main-footer 
+.bank-info
     margin-bottom: rem(30)
     margin-top: rem(20)
     display: flex
     justify-content: center
     align-items: center
     color: var(--main-color)
-    .footer-text
+    .info-text
         font-weight: 550
         font-size: rem(18)
         padding-left: rem(10)
@@ -80,9 +80,43 @@ $mobileSmall: em(420) // Телефоны S
     @media (max-width:768px)
         display: none !important
 
+.hidden
+    display: none
+
+.show
+    display: block
+
+.footer
+    position: fixed
+    width: 100%
+
+.footer.show
+  -webkit-animation: linear
+  -webkit-animation-name: show
+  -webkit-animation-duration: .5s
+  position: relative
+
+@keyframes show
+  0%
+    bottom: -310px
+  10%
+    bottom: -280px
+  20%
+    bottom: -250px
+  30%
+    bottom: -220px
+  40%
+    bottom: -190px
+  50%
+    bottom: -160px
+  100%
+    bottom: 0
+
 @import "blocks/cards"
 @import "blocks/cards-admin"
 @import "about"
 @import "admin"
 @import "blocks/left-menu"
 @import "blocks/burger-menu"
+
+@import "footer"
