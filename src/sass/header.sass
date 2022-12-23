@@ -280,6 +280,20 @@
         display: flex !important
 
 .header-menu
+    &:not(.active)
+        .menu-top
+            @media (max-width: 1000px)
+                max-width: 200px
+                overflow: hidden
+                height: 20px
+                align-items: center
+    @media (max-width: 1000px) 
+        display: flex
+        align-items: center
+        .open-detail
+            margin-left: rem(20)
+            font-size: 20px
+        
     .menu-top
         display: flex
 

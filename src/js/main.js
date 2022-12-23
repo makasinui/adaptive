@@ -51,6 +51,23 @@ window.onload = function () {
     })
   }
 
+  const headerBottomMenu = document.querySelector('.header__bottom.header-menu');
+  
+  if(headerBottomMenu) {
+      const openDetail = headerBottomMenu.querySelector('.open-detail');
+      openDetail.addEventListener('click', () => {
+        if (headerBottomMenu.classList.contains('active')) {
+          openDetail.textContent = 'Ещё'
+          headerBottomMenu.classList.remove('active')
+        } else {
+          openDetail.textContent = 'Скрыть'
+          headerBottomMenu.classList.add('active')
+        }
+      })
+
+      
+  }
+
   const bankInfoButton = document.querySelector('.bank-info__button');
   const footer = document.querySelector('.footer');
 
