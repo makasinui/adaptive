@@ -282,13 +282,22 @@
 .header-menu
     .open-detail
         display: none
+    .svg-icon-arrow
+        transition: 0.5s all
+    &.active
+        .svg-icon-arrow
+            transform: rotate(180deg)
+        .detail-menu-wrapper
+            transition: 0.5s all
+            background-color: white
+            border-radius: 12px
+            position: absolute
+            li
+                padding: 5px 0
     &:not(.active)
-        .menu-top
-            @media (max-width: 1000px)
-                max-width: 200px
-                overflow: hidden
-                height: 20px
-                align-items: center
+        .detail-menu-wrapper
+            display: none
+            
     @media (max-width: 1000px) 
         display: flex
         align-items: center
@@ -299,7 +308,11 @@
         
     .menu-top
         display: flex
-
+        @media (max-width: 1000px)
+            max-width: 270px
+            overflow: hidden
+            height: 20px
+            align-items: center
         &__item
             color: #2a344c
             font-size: 20px

@@ -57,10 +57,8 @@ window.onload = function () {
       const openDetail = headerBottomMenu.querySelector('.open-detail');
       openDetail.addEventListener('click', () => {
         if (headerBottomMenu.classList.contains('active')) {
-          openDetail.textContent = 'Ещё'
           headerBottomMenu.classList.remove('active')
         } else {
-          openDetail.textContent = 'Скрыть'
           headerBottomMenu.classList.add('active')
         }
       })
