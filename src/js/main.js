@@ -28,11 +28,11 @@ window.onload = function () {
         allItems.forEach(it => {it.style.marginBottom = '16px'; it.style.marginTop = '16px'})
         const allItemsArray = [];
 
-        for(let i = 0; i < allItems.length; i++ ) 
+        for(let i = 0; i < allItems.length; i++ )
           allItemsArray.push(allItems[i]);
 
         const idx = allItemsArray.findIndex(a => a===menu.closest('.menu-top__item'));
-          
+
         if(!arrow.classList.contains('checked')) {
           arrow.classList.add('checked');
           readMore.classList.add('checked');
@@ -42,17 +42,17 @@ window.onload = function () {
         } else {
           arrow.classList.remove('checked');
           readMore.classList.remove('checked');
-          
+
           allItems[idx].style.marginBottom = '16px';
           allItems[idx + 1].style.marginTop = '16px';
-        
+
         }
       })
     })
   }
 
   const headerBottomMenu = document.querySelector('.header__bottom.header-menu');
-  
+
   if(headerBottomMenu) {
       const openDetail = headerBottomMenu.querySelector('.open-detail');
       openDetail.addEventListener('click', () => {
@@ -63,7 +63,7 @@ window.onload = function () {
         }
       })
 
-      
+
   }
 
   const bankInfoButton = document.querySelector('.bank-info__button');
@@ -107,13 +107,13 @@ window.onload = function () {
     if (cookie === 'selection-bank') {
       selectionIndividualsSm.classList.remove('active');
       selectionBankSm.classList.add('active');
-      
+
       document.documentElement.style.setProperty("--main-color", "#2c9e47");
       document.documentElement.style.setProperty(
         "--table-line",
         `var(--main-color) url("../images/dots (3).png") no-repeat center`
       );
-        
+
         if (document.querySelector(".info-img")) {
           document.querySelector(".info-img").src = "./images/info-green.png";
         }
@@ -135,7 +135,7 @@ window.onload = function () {
     selectionIndividualsSm.addEventListener('click', () => {
       setMainColor('selection-individuals');
     });
-  
+
     selectionBankSm.addEventListener('click', () => {
       setMainColor('selection-bank');
     });
@@ -169,7 +169,7 @@ window.onload = function () {
     );
     selectionIndividuals.style.opacity = "34%";
     selectionBank.style.opacity = "1";
-    
+
     selectionIndividualsSm && selectionIndividualsSm.classList.remove('active');
     selectionBankSm && selectionBankSm.classList.add('active');
     personButton.checked = true;
@@ -215,6 +215,20 @@ window.onload = function () {
       document.cookie =
         "person-selection=selection-individuals;expires=" +
         cookieDate.toUTCString();
+    }
+  });
+
+  selectionIndividuals.addEventListener('click', function (e) {
+    let selected = getCookie("person-selection");
+    if (selected !== "selection-individuals") {
+      personButton.click()
+    }
+  });
+
+  selectionBank.addEventListener('click', function (e) {
+    let selected = getCookie("person-selection");
+    if (selected !== "selection-bank") {
+      personButton.click()
     }
   });
 
@@ -309,10 +323,10 @@ window.onload = function () {
         `option[data-value="${e.target.value}"]`
       );
       let nextTabValue = e.target.value;
-  
+
       let activeTab = document.querySelector(".detailed-tab-sm.active");
       let activeTabValue = activeTab.getAttribute("data-value");
-  
+
       let activeText = document.querySelector(
         '.detailed .detailed-tabs-body .detailed-tabs-body__text[data-value="' +
           activeTabValue +
@@ -323,15 +337,15 @@ window.onload = function () {
           nextTabValue +
           '"]'
       );
-  
+
       if (!tab.classList.contains("active")) {
         tab.classList.add("active");
         activeTab.classList.remove("active");
-  
+
         nextText.classList.add("show");
         activeText.classList.remove("show");
       }
-  
+
       toggleContent(nextText, nextTabValue);
     });
   }
@@ -384,13 +398,13 @@ window.onload = function () {
       const con = document.querySelector(".make-loan__scroll");
       const step = 100;
       const sl = container.scrollLeft;
-  
+
       if (sl >= 200) {
         arrows[1].classList.add("gray");
       } else {
         arrows[1].classList.remove("gray");
       }
-  
+
       if (sl - step <= -100) {
         arrows[0].classList.add("gray");
       } else {
