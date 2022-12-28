@@ -340,7 +340,9 @@
                 margin-right: rem(100)
 
             @include adaptiveValue('margin-right', 100, 55, 1366, 1000)
-
+    @media (max-width: 1000px)
+        .menu-top__item.hidden
+            margin-right: 0
     @media (max-width: 1080px)
         .menu-top_item--hide-2
             display: none
