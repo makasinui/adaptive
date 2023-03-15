@@ -232,15 +232,15 @@ window.onload = function () {
     }
   });
 
-  let citySelector = document.querySelector(".cite-selector");
+  let citySelector = document.querySelectorAll(".cite-selector");
 
-  citySelector.addEventListener("click", function () {
-    if (citySelector.classList.contains("show")) {
-      citySelector.classList.remove("show");
+  citySelector.forEach(item => item.addEventListener("click", function () {
+    if (item.classList.contains("show")) {
+      item.classList.remove("show");
     } else {
-      citySelector.classList.add("show");
+      item.classList.add("show");
     }
-  });
+  }));
 
   let citySelectOptions = document.querySelectorAll(
     ".cite-selector .cite-selector__option"
