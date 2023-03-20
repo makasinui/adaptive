@@ -38,7 +38,7 @@ $mobileSmall: em(420) // Телефоны S
 
         @media (max-width: $tablet)
             padding: 0 rem(math.div(100, 2))
-        
+
 
 
         @include adaptiveValue('padding-left', 50, 20, 1000, 420)
@@ -50,6 +50,7 @@ $mobileSmall: em(420) // Телефоны S
 .content-container
     max-width: 1040px
     margin: 0 20px
+    width: 100%
     //margin: 0 auto
 
     @media (max-width: $tablet)
@@ -67,7 +68,7 @@ $mobileSmall: em(420) // Телефоны S
 .wrapper
     display: flex
     justify-content: space-between
-    
+
     @media (max-width: 768px)
         flex-direction: column
 
@@ -78,14 +79,14 @@ $mobileSmall: em(420) // Телефоны S
     font-size: 24px
     color: #2a344c
     font-weight: bold
-.sm-only 
+.sm-only
     display: none !important
     @media (min-width: 320px) and (max-width: 768px)
         display: inherit !important
 .sm-column
     @media (min-width: 320px) and (max-width: 768px)
         flex-direction: column
-.sm-none 
+.sm-none
     @media (max-width:768px)
         display: none !important
 @import "header"

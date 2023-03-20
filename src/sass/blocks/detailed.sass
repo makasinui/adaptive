@@ -14,7 +14,7 @@
             margin-bottom: 40px
             border-radius: 27px
             justify-content: space-between
-            &.sm 
+            &.sm
                 box-shadow: 1px 1px 3px gray
                 @media (min-width: 769px)
                     display: none
@@ -30,7 +30,7 @@
                     display: block
                 .text-block
                     margin-top: rem(10)
-                    &.overflow 
+                    &.overflow
                         max-height: 650px
                         overflow: hidden
             &-body__btn
@@ -52,7 +52,7 @@
                     &::after
                         transition: 0.5s all
                         rotate: 270deg
-            &__select 
+            &__select
                 display: flex
                 justify-content: center
                 width: 100%
@@ -75,3 +75,60 @@
                 cursor: default
                 background-color: var(--main-color)
                 border-radius: 27px
+        &-accordion-wrapper
+            background-color: white
+            border-radius: 10px
+            filter: drop-shadow(1.634px 2.516px 3.5px rgba(193,193,193,0.73))
+            margin-top: 10px
+        &-accordion
+            display: flex
+            width: 100%
+            align-items: center
+            background-color: rgba(255,255,255,0.7803921568627451)
+            padding: rem(15) rem(25)
+            cursor: pointer
+            border-radius: 10px
+            filter: drop-shadow(1.634px 2.516px 3.5px rgba(193,193,193,0.73))
+            @media (max-width: $mobile)
+                font-size: rem(14)
+            &__item
+                display: flex
+                gap: 10px
+                @media (max-width: $mobile)
+                    flex-direction: column
+            &::after
+                flex-shrink: 0
+                width: 0.75rem
+                height: 0.75rem
+                margin-left: .5rem
+                background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" height="100" width="100"%3E%3Cpath d="M97.625 25.3l-4.813-4.89c-1.668-1.606-3.616-2.41-5.84-2.41-2.27 0-4.194.804-5.777 2.41L50 52.087 18.806 20.412C17.223 18.805 15.298 18 13.03 18c-2.225 0-4.172.804-5.84 2.41l-4.75 4.89C.813 26.95 0 28.927 0 31.23c0 2.346.814 4.301 2.439 5.865l41.784 42.428C45.764 81.174 47.689 82 50 82c2.268 0 4.215-.826 5.84-2.476l41.784-42.428c1.584-1.608 2.376-3.563 2.376-5.865 0-2.26-.792-4.236-2.375-5.932z"/%3E%3C/svg%3E')
+                background-size: cover
+                content: ""
+
+            &.active
+                cursor: default
+                background-color: var(--main-color)
+                &:after
+                    transform: rotate(180deg)
+
+            &:hover
+                box-shadow: 0 0 3px 1px var(--main-color)
+                transition-duration: 0.3s
+            & div:last-child
+                margin-left: auto
+        &-panel
+            padding: 30px
+            background-color: white
+            display: none
+            overflow: hidden
+            border-radius: 10px
+            @media (max-width: $mobile)
+                padding: 15px
+            &__header
+                font-size: 19px
+                font-family: $fontFamily
+                color: #2a344c
+                font-weight: bold
+                line-height: rem(25)
+            & p
+                padding: 10px 0
