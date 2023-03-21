@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Банк дружба</title>
+
+    <link rel="stylesheet" href="./css/loans.min.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <header class="header">
+			<div class="container">
+				<div class="header-top">
+					<div class="header-left">
+						<div class="header-left__logo header-logo">
+							<a class="header-logo__link" href="/">
+								<img class="header-logo__image" src="./images/layouts/logo.png" alt="Банк Дружба">
+							</a>
+						</div>
+						<div class="left-header__person-button person-button sm-none">
+							<input class="person-button__input" type="checkbox">
+
+							<div class="person-button__selections">
+							  <p class="person-button__text selection-individuals" style="opacity: 0.34;">
+								Частным лицам
+							  </p>
+							  <p class="person-button__text selection-bank" style="opacity: 1;">Банкам</p>
+							</div>
+						</div>
+						<div class="a-header">
+							<input type="checkbox" name="main-nav" id="main-nav" class="burger-check">
+							<label for="main-nav" class="burger menu"><span></span></label>
+							<div class="menu-top__wrapper">
+								<ul>
+								  <li class="menu-top__item">
+									<a class="menu-top__link main-menu__text" href="#">
+										Меню
+									</a>
+								  </li>
+								  <li class="menu-top__item">
+									<div class="menu-top__item-wrapper">
+										<div class="item-main">
+											<a class="menu-top__link" href="#">Вклады</a>
+											<div class="menu-top__arrow-wrapper">
+												<svg height="15" viewBox="0 0 9 15" width="9" class="menu-top__arrow">
+													<path clip-rule="evenodd" d="M7.757 14.353c.402-.405.42-1.08.042-1.508L3.112 7.542 7.8 2.24A1.117 1.117 0 007.757.732a.957.957 0 00-1.413.045L1.01 6.81a1.119 1.119 0 000 1.463l5.334 6.034a.957.957 0 001.413.045z" fill="currentColor" fill-rule="evenodd"></path>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<div class="menu-top__arrow-detail">
+										<ul class="menu-top__detail-wrapper">
+											<li class="menu-top__detail-item">
+												<a href="menu-top__link">Detail #1</a>
+											</li>
+											<li class="menu-top__detail-item">
+												<a href="" class="menu-top__link">Detail #2</a>
+											</li>
+										</ul>
+									</div>
+								  </li>
+								  <li class="menu-top__item">
+									<div class="menu-top__item-wrapper">
+										<div class="item-main">
+											<a class="menu-top__link" href="#">Кредиты</a>
+											<div class="menu-top__arrow-wrapper">
+												<svg height="15" viewBox="0 0 9 15" width="9" class="menu-top__arrow">
+													<path clip-rule="evenodd" d="M7.757 14.353c.402-.405.42-1.08.042-1.508L3.112 7.542 7.8 2.24A1.117 1.117 0 007.757.732a.957.957 0 00-1.413.045L1.01 6.81a1.119 1.119 0 000 1.463l5.334 6.034a.957.957 0 001.413.045z" fill="currentColor" fill-rule="evenodd"></path>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<div class="menu-top__arrow-detail">
+										<ul class="menu-top__detail-wrapper">
+											<li class="menu-top__detail-item">
+												<a href="menu-top__link">Detail #1</a>
+											</li>
+											<li class="menu-top__detail-item">
+												<a href="" class="menu-top__link">Detail #2</a>
+											</li>
+										</ul>
+									</div>
+								  </li>
+								  <li class="menu-top__item">
+									<div class="menu-top__item-wrapper">
+										<div class="item-main">
+											<a class="menu-top__link" href="#">Переводы</a>
+											<div class="menu-top__arrow-wrapper">
+												<svg height="15" viewBox="0 0 9 15" width="9" class="menu-top__arrow">
+													<path clip-rule="evenodd" d="M7.757 14.353c.402-.405.42-1.08.042-1.508L3.112 7.542 7.8 2.24A1.117 1.117 0 007.757.732a.957.957 0 00-1.413.045L1.01 6.81a1.119 1.119 0 000 1.463l5.334 6.034a.957.957 0 001.413.045z" fill="currentColor" fill-rule="evenodd"></path>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<div class="menu-top__arrow-detail">
+										<ul class="menu-top__detail-wrapper">
+											<li class="menu-top__detail-item">
+												<a href="menu-top__link">Detail #1</a>
+											</li>
+											<li class="menu-top__detail-item">
+												<a href="" class="menu-top__link">Detail #2</a>
+											</li>
+										</ul>
+									</div>
+								  </li>
+								  <li class="menu-top__item">
+									<div class="menu-top__item-wrapper">
+										<div class="item-main">
+											<a class="menu-top__link" href="#">Обмен валют</a>
+											<div class="menu-top__arrow-wrapper">
+												<svg height="15" viewBox="0 0 9 15" width="9" class="menu-top__arrow">
+													<path clip-rule="evenodd" d="M7.757 14.353c.402-.405.42-1.08.042-1.508L3.112 7.542 7.8 2.24A1.117 1.117 0 007.757.732a.957.957 0 00-1.413.045L1.01 6.81a1.119 1.119 0 000 1.463l5.334 6.034a.957.957 0 001.413.045z" fill="currentColor" fill-rule="evenodd"></path>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<div class="menu-top__arrow-detail">
+										<ul class="menu-top__detail-wrapper">
+											<li class="menu-top__detail-item">
+												<a href="menu-top__link">Detail #1</a>
+											</li>
+											<li class="menu-top__detail-item">
+												<a href="" class="menu-top__link">Detail #2</a>
+											</li>
+										</ul>
+									</div>
+								  </li>
+								  <li class="menu-top__item">
+									<div class="menu-top__item-wrapper">
+										<div class="item-main">
+											<a class="menu-top__link" href="#">Сейфовые ячейки</a>
+											<div class="menu-top__arrow-wrapper">
+												<svg height="15" viewBox="0 0 9 15" width="9" class="menu-top__arrow">
+													<path clip-rule="evenodd" d="M7.757 14.353c.402-.405.42-1.08.042-1.508L3.112 7.542 7.8 2.24A1.117 1.117 0 007.757.732a.957.957 0 00-1.413.045L1.01 6.81a1.119 1.119 0 000 1.463l5.334 6.034a.957.957 0 001.413.045z" fill="currentColor" fill-rule="evenodd"></path>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<div class="menu-top__arrow-detail">
+										<ul class="menu-top__detail-wrapper">
+											<li class="menu-top__detail-item">
+												<a href="menu-top__link">Detail #1</a>
+											</li>
+											<li class="menu-top__detail-item">
+												<a href="" class="menu-top__link">Detail #2</a>
+											</li>
+										</ul>
+									</div>
+								  </li>
+								  <li class="menu-top__item">
+									<div class="menu-top__item-wrapper">
+										<div class="item-main">
+											<a class="menu-top__link" href="#">Тарифы</a>
+											<div class="menu-top__arrow-wrapper">
+												<svg height="15" viewBox="0 0 9 15" width="9" class="menu-top__arrow">
+													<path clip-rule="evenodd" d="M7.757 14.353c.402-.405.42-1.08.042-1.508L3.112 7.542 7.8 2.24A1.117 1.117 0 007.757.732a.957.957 0 00-1.413.045L1.01 6.81a1.119 1.119 0 000 1.463l5.334 6.034a.957.957 0 001.413.045z" fill="currentColor" fill-rule="evenodd"></path>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<div class="menu-top__arrow-detail">
+										<ul class="menu-top__detail-wrapper">
+											<li class="menu-top__detail-item">
+												<a href="menu-top__link">Detail #1</a>
+											</li>
+											<li class="menu-top__detail-item">
+												<a href="" class="menu-top__link">Detail #2</a>
+											</li>
+										</ul>
+									</div>
+								  </li>
+								</ul>
+							</div>
+						  </div>
+
+
+					</div>
+					<div class="header-mobile sm-only">
+						<div class="header-right__telephone telephone">
+							<a class="telephone__link" href="tel:+74974192813">+7 (497) 419-28-13</a>
+						</div>
+						<div class="header-right">
+							<div class="header-right__cite-selector cite-selector sm-only">
+								<div class="cite-selector__backdrop">Москва</div>
+								<button type="button" class="cite-selector__toggle"></button>
+								<div class="cite-selector__dropdown">
+									<ul class="cite-selector__options">
+										<li class="cite-selector__option">Москва</li>
+										<li class="cite-selector__option">Тюмень</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header-right">
+						<div class="header-right__first sm-none">
+							<div class="header-right__telephone telephone">
+								<a class="telephone__link" href="tel:+74974192813">+7 (497) 419-28-13</a>
+							</div>
+						</div>
+						<div class="header-left__person-button person-button sm-only">
+							<div class="person-button__selections">
+								<p class="person-button__text selection-individuals">Частным лицам</p>
+								<p class="person-button__text selection-bank">Бизнесу</p>
+							</div>
+						</div>
+
+						<div class="header-right__second">
+							<div class="header-right__cite-selector cite-selector sm-none">
+								<div class="cite-selector__backdrop">Москва</div>
+
+								<button type="button" class="cite-selector__toggle"></button>
+
+								<div class="cite-selector__dropdown">
+									<ul class="cite-selector__options">
+										<li class="cite-selector__option">Москва</li>
+										<li class="cite-selector__option">Тюмень</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="header-right__vision">
+
+							</div>
+						</div>
+					</div>
+				</div>
+        <div class="header-bottom">
+          <div class="header__bottom header-menu">
+            <ul class="header-menu__top menu-top">
+              <li class="menu-top__item">
+                <a class="menu-top__link" href="#">Вклады</a>
+              </li>
+              <li class="menu-top__item">
+                <a class="menu-top__link" href="#">Кредиты</a>
+              </li>
+              <li class="menu-top__item">
+                <a class="menu-top__link" href="#">Переводы</a>
+              </li>
+            <li class="menu-top__item menu-top_item--hide-1">
+                <a class="menu-top__link" href="#">Обмен валют</a>
+            </li>
+            <li class="menu-top__item menu-top_item--hide-2">
+                <a class="menu-top__link" href="#">Сейфовые ячейки</a>
+            </li>
+            <li class="menu-top__item menu-top_item--hide-3">
+                <a class="menu-top__link" href="#">Тарифы</a>
+            </li>
+            </ul>
+              <div class="open-detail sm-none">
+                  Ещё...
+
+                  <svg class="svg-icon-arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                       viewBox="0 0 330 330" style="color:var(--main-color); width: 12px" xml:space="preserve">
+                  <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                  c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                  s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/>
+                </svg>
+                  <div class="detail-menu-wrapper">
+                      <ul class="detail-menu-wrapper__list">
+                          <li class="menu-top__item hidden menu-top__item--hidden-1">
+                              <a class="menu-top__link" href="#">Обмен валют</a>
+                          </li>
+                          <li class="menu-top__item hidden menu-top__item--hidden-2">
+                              <a class="menu-top__link" href="#">Сейфовые ячейки</a>
+                          </li>
+                          <li class="menu-top__item hidden menu-top__item--hidden-3">
+                              <a class="menu-top__link" href="#">Тарифы</a>
+                          </li>
+                      </ul>
+                  </div>
+
+              </div>
+          </div>
+        </div>
+			</div>
+		</header>
+
+    <main class="main">
+      <section class="main__breadcrumbs breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs-list">
+            <li class="breadcrumbs-list__item">
+              <a class="breadcrumbs-list__link" href="#">Главная</a>
+            </li>
+            <li class="breadcrumbs-list__item">Контакты</li>
+          </ul>
+        </div>
+      </section>
+      <section class="main__page-header page-header sm-only">
+        О банке
+      </section>
+      <div class="wrapper container">
+
+        <div class="contacts-container">
+          <section class="main__page-header page-header sm-none">
+            <h2>Контакты</h2>
+          </section>
+            <div class="contacts-item-list">
+                <div class="contacts-item">
+                    <div class="contacts-info contacts-item">
+                        <div class="contacts-info__header">Москва</div>
+                        <div class="contacts-info__address">ул. Воронцовская, д. 4, стр. 1</div>
+                        <div class="contacts-info__phone">
+                            <a href="tel:+4954192813">(495) 419-28-13</a>
+                        </div>
+                        <div class="contacts-info__email">
+                            <a href = "mailto: mf@bankd.ru">mf@bankd.ru</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts-item">
+                    <div class="contacts-info contacts-item">
+                        <div class="contacts-info__header">Москва</div>
+                        <div class="contacts-info__address">ул. Воронцовская, д. 4, стр. 1</div>
+                        <div class="contacts-info__phone">
+                            <a href="tel:+4954192813">(495) 419-28-13</a>
+                        </div>
+                        <div class="contacts-info__email">
+                            <a href = "mailto: mf@bankd.ru">mf@bankd.ru</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts-item">
+                    <div class="contacts-info contacts-item">
+                        <div class="contacts-info__header">Москва</div>
+                        <div class="contacts-info__address">ул. Воронцовская, д. 4, стр. 1</div>
+                        <div class="contacts-info__phone">
+                            <a href="tel:+4954192813">(495) 419-28-13</a>
+                        </div>
+                        <div class="contacts-info__email">
+                            <a href = "mailto: mf@bankd.ru">mf@bankd.ru</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-info info">
+          <div class="footer-logo">
+            <a class="footer-logo__link" href="#">
+              <img class="footer-logo__image" src="./images/layouts/footer-logo.png" alt="">
+            </a>
+          </div>
+
+          <div class="footer-phone">
+            <a class="footer-phone__link" href="tel:+74974192813">+7 (497) 419-28-13</a>
+          </div>
+
+          <div class="footer-email">
+            <a class="footer-email__link" href="mail:mf@bankd.ru">mf@bankd.ru</a>
+          </div>
+
+          <div class="footer-address">
+            <p class="footer-address__text">
+              109044, г. Москва,<br>ул. Воронцовскаяб д4, стр. 1
+            </p>
+
+            <a class="footer-address__link" href="#">Показать на карте</a>
+          </div>
+        </div>
+
+        <div class="footer-menu">
+          <div class="menu-block">
+            <p class="menu-block__name">О Банке</p>
+
+            <ul class="menu-block-list menu-list">
+              <li class="menu-list__item">
+                <a href="" class="menu-list__link">Руковоство</a>
+              </li>
+
+              <li class="menu-list__item">
+                <a href="" class="menu-list__link">Аффилированные лица</a>
+              </li>
+
+              <li class="menu-list__item">
+                <a href="" class="menu-list__link">Участники</a>
+              </li>
+
+              <li class="menu-list__item">
+                <a href="" class="menu-list__link">Информация о лицах, под контролем либо значительным влиянием
+                  которых находиться банк</a>
+              </li>
+
+              <li class="menu-list__item">
+                <a href="" class="menu-list__link">Организационная структура</a>
+              </li>
+
+              <li class="menu-list__item">
+                <a href="" class="menu-list__link">Финансовые показатели</a>
+              </li>
+
+              <li class="menu-list__item">
+                <a href="" class="menu-list__link">Внутренний контроль</a>
+              </li>
+
+              <li class="menu-list__item">
+                <a href="" class="menu-list__link">Контактная информация</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="menu-block">
+            <p class="menu-block__name">Частным лицам</p>
+
+            <ul class="menu-block-list menu-list">
+              <li class="menu-list__item">
+                <a href="" class="menu-list__link">Вклады</a>
+              </li>
+
+              <li class="menu-list__item">
+                <a href="" class="menu-list__link">Кредиты</a>
+              </li>
+
+              <li class="menu-list__item">
+                <a href="" class="menu-list__link">Денежные переводы</a>
+              </li>
+
+              <li class="menu-list__item">
+                <a href="" class="menu-list__link">Обмен валют</a>
+              </li>
+
+              <li class="menu-list__item">
+                <a href="" class="menu-list__link">Сейфовые ячейки</a>
+              </li>
+
+              <li class="menu-list__item">
+                <a href="" class="menu-list__link">Тарифы</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="menu-block">
+            <p class="menu-block__name">Дополнительная информация</p>
+
+            <ul class="menu-block-list menu-list">
+              <li class="menu-list__item">
+                <a href="" class="menu-list__link">Реализуемое имущество</a>
+              </li>
+
+              <li class="menu-list__item">
+                <a href="" class="menu-list__link">Обращения потребителей</a>
+              </li>
+
+              <li class="menu-list__item">
+                <a href="" class="menu-list__link">Часто задаваемые вопросы</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script src="./js/main.min.js"></script>
+</html>

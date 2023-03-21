@@ -1,0 +1,38 @@
+.main
+  .contacts-container
+    width: 100%
+  .contacts-item
+    font-size: 19px
+    cursor: pointer
+    padding: rem(60) rem(60)
+    border-radius: 27px
+    background-image: url("../images/layouts/background.png")
+    filter: drop-shadow(1.634px 2.516px 3.5px rgba(193,193,193,0.73))
+
+    display: flex
+    @media (max-width: $mobileSmall)
+      padding: rem(20) rem(20)
+      flex-direction: column
+      height: 600px
+      justify-content: flex-end
+    .contacts-info
+      display: flex
+      flex-direction: column
+      background-color: rgba(255, 255, 255, 0.7803921568627451)
+      padding: rem(60) rem(30)
+      gap: 15px
+      &__header
+        font-size: 30px
+        font-weight: bold
+        color: var(--main-color)
+        @media (max-width: $mobileSmall)
+          font-size: 24px
+      &__email
+        text-decoration: underline
+        color: #2a5dd8
+      @media (max-width: $mobileSmall)
+        height: auto
+    &-list
+      display: flex
+      flex-direction: column
+      gap: 30px
